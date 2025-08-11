@@ -75,7 +75,7 @@ Note that during execution, you may be asked to be prompted for the password of 
 ```
 
 ## Output
-![Web Landing Page](image.png)
+![Web Landing Page](images/image.png)
 - template source: https://www.tooplate.com/view/2137-barista-cafe 
 
 <!-- Fourth Project Letsgo! -->
