@@ -11,8 +11,9 @@ More details of the specific VM setup can be seen in the `Vagrantfile` provided.
 
 ## Tech Stack and Scripts
 This project is deployed on a CentOS/RHEL server but with **Nginx** for improved performance and efficiency in serving static files.
-- Web Server: Nginx
-- Networking: Configured with firewalld to secure access to the web server.
+- **VM management:** Vagrant
+- **Web Server:** Nginx
+- **Networking:** Configured with firewalld to secure access to the web server.
 
 This was achieved by the two bash scripts: `setup.sh` and `deploy.sh`:
 
