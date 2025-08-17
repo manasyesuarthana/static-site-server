@@ -18,7 +18,7 @@ This project is deployed on a CentOS/RHEL server but with **Nginx** for improved
 This was achieved by the two bash scripts: `setup.sh` and `deploy.sh`:
 
 - `setup.sh`: a script used to set up the OS of the remote server -- install updates, software, starting services (`nginx` and `firewalld`), and setting up permissions -- This script will be transferred to the server using `scp` and executed remotely using `ssh`.
-- `deploy.sh`: a script that will be run on my local machine. This sets up the connection between my machone and the remote server by generating SSH keys and will sync web files to the remote server using `rsync`.
+- `deploy.sh`: a script that will be run on my local machine. This sets up the connection between my machine and the remote server by generating SSH keys and will sync web files to the remote server using `rsync`.
 
 Additional script `cleanup.sh`: to demobilize (un-deploy) the static website from the remote server, clean up artifacts, and stop the services from running. 
 
