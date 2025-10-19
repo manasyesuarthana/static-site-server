@@ -25,6 +25,7 @@ log "Installing Packages"
 sudo yum install $PACKAGES -y
 
 log "Configuring user permissions"
+sudo mkdir -p /var/www/html
 sudo chown -R vagrant:vagrant /var/www/html
 
 log "Setting up and Configuring Nginx"

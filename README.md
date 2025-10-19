@@ -28,6 +28,7 @@ Additional script `cleanup.sh`: to demobilize (un-deploy) the static website fro
 **Ensure you have the following software installed on your computer before starting:**
 - Vagrant
 - SSH (sshd or openssh)
+- Linux (Any Distro)
 
 Knowledge of these fields are not mandatory, but better if you want to understand what's going on:
 - Linux services, networking and permissions
@@ -38,6 +39,17 @@ Knowledge of these fields are not mandatory, but better if you want to understan
 
 ## Getting Started
 Follow these steps to replicate my setup and serve a static site on the VM:
+
+## **Important note:** 
+Make sure you are running this in linux. Clone the repository in a linux environment, and follow the rest of the steps. 
+
+If you decide to clone it into a windows environment beforehand, there will be an **error** because of the way Windows encode `endline` characters to `\r\n` instead of `\n`. This turns the script identifiers from `#!/bin/bash` to `#!/bin/bash\r` making it impossible to execute the scripts, and as a result return this error:
+
+```bash
+-bash: ./[script_name].sh: cannot execute: required file not found
+```
+
+**Now assuming that you are now using a linux machine (virtual machine, wsl, or core OS: all works fine), follow these steps to start the automation:**
 
 1. Clone the repository
 ```bash
@@ -65,6 +77,8 @@ chmod 700 setup.sh deploy.sh cleanup.sh
 ```
 Note that during execution, you may be asked to be prompted for the password of your user and the user of the VM. This is because some commands requires sudo privileges.
 
+In addition, depending on how powerful your device and internet is, this may take quite a while as the setup involves updating and upgrading the system as well as installing packages needed for the server to run flawlessly.
+
 6. Access the website in your local browser by typing the address of the VM in your browser:
 ```
 192.168.34.10
@@ -76,7 +90,6 @@ Note that during execution, you may be asked to be prompted for the password of 
 ```
 
 ## Output
-![Web Landing Page](images/image.png)
+![Script Output 1](images/image1.png)
+![Web Landing Page](images/image2.png)
 - template source: https://www.tooplate.com/view/2137-barista-cafe 
-
-<!-- Fourth Project Letsgo! -->
